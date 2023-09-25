@@ -119,11 +119,19 @@ img {
 .contacts-item:focus {
   color: #404bbf;
 }
+
 .section-one {
   padding: 188px 0;
   background: var(--NAVY-BLUE, #2e2f42);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-
 .container.section-one-container {
   padding-left: 15px;
   display: block;
@@ -131,6 +139,7 @@ img {
   flex-shrink: 0;
   margin: 0 auto;
 }
+
 .section-one-title {
   color: var(--WHITE, #fff);
   text-align: center;
@@ -271,8 +280,7 @@ img {
   margin-bottom: 32px;
   text-align: center;
 }
-.container.section-portfolio-container {
-}
+
 .section-portfolio {
   padding-top: 120px;
   padding-bottom: 120px;
