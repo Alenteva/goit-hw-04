@@ -184,6 +184,7 @@ img {
   margin-top: 48px;
   margin-right: auto;
   margin-left: auto;
+  transition: background-color 250ms ease-in-out;
 }
 .section-one-button:hover {
   background: #404bbf;
