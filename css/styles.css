@@ -36,6 +36,9 @@ img {
   border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
   background: var(--WHITE, #fff);
   color: var(--NAVY-BLUE, #2e2f42);
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .container {
@@ -92,6 +95,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   padding: 24px 0;
+  transition: color 250ms ease-in-out, text-decoration 250ms ease-in-out;
 }
 .menu-item:hover,
 .menu-item:focus,
@@ -102,7 +106,7 @@ img {
 .current {
   color: var(--OCEAN, #404bbf);
 }
-.menu-item.current::after {
+.menu-item:after.current::after {
   color: #404bbf;
   width: 48px;
   height: 4px;
@@ -303,6 +307,7 @@ img {
   background-color: #4d5ae5;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms ease-in-out;
 }
 .icon {
   fill: #f4f4fd;
@@ -324,6 +329,33 @@ img {
   text-transform: capitalize;
   text-align: center;
   margin-bottom: 72px;
+}
+.thumb {
+  position: relative;
+  overflow: hidden;
+}
+.thumb .text {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 164px;
+  transition: transform 250ms ease-in-out;
+  transform: translateX(-100%);
+
+  background: var(--IRIS, #4d5ae5);
+  color: #f4f4fd;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.thumb:hover .text {
+  transform: translateX(0);
 }
 .section-portfolio-list {
   display: flex;
@@ -358,6 +390,8 @@ img {
 .container.footer-container {
   padding-left: 15px;
   flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
 }
 .footer-logo {
   color: var(--IRIS, #4d5ae5);
@@ -382,4 +416,36 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   width: 264px;
+}
+.social-media {
+  color: var(--WHITE, #fff);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.footer-link {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 16px;
+  width: 208px;
+}
+.link-icon {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms ease-in-out;
+}
+.logo-text {
+  padding: 0;
+}
+.media {
+  padding: 0;
+  margin: 0 auto;
+  margin-left: 120px;
 }
