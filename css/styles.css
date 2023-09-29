@@ -441,6 +441,9 @@ img {
   align-items: center;
   transition: background-color 250ms ease-in-out;
 }
+.link-icon:hover {
+  background-color: #31d0aa;
+}
 .logo-text {
   padding: 0;
 }
