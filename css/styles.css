@@ -36,6 +36,9 @@ img {
   border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
   background: var(--WHITE, #fff);
   color: var(--NAVY-BLUE, #2e2f42);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
   position: sticky;
   top: 0;
   z-index: 999;
@@ -108,14 +111,16 @@ img {
   color: var(--OCEAN, #404bbf);
   position: relative;
 }
-.menu-item:after.current::after {
-  color: #404bbf;
+.current:after {
+  background-color: #404bbf;
   width: 48px;
   height: 4px;
   border-radius: 2px;
   content: "";
   position: absolute;
   display: block;
+  left: 0;
+  bottom: 1px;
 }
 .contacts {
   font-style: normal;
@@ -129,6 +134,9 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-item:hover,
 .contacts-item:focus {
@@ -222,8 +230,11 @@ img {
   border-radius: 4px;
   border: 1px solid var(--LIGHT-SLATE, #8e8f99);
   background: var(--CLOUD, #f4f4fd);
-  padding: 24px 100px;
   margin-bottom: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .advantages-list {
   display: flex;
@@ -300,6 +311,7 @@ img {
 .social-link {
   display: flex;
   width: 232px;
+  height: 40px;
   gap: 24px;
   justify-content: center;
   align-items: center;
@@ -320,8 +332,8 @@ img {
 .icon {
   fill: #f4f4fd;
 }
-.link:hover {
-  background-color: #31d0aa;
+.link:hover .linc:focus {
+  background-color: #404bbf;
 }
 
 .section-portfolio {
