@@ -111,6 +111,7 @@ img {
   color: var(--OCEAN, #404bbf);
   position: relative;
 }
+
 .current:after {
   background-color: #404bbf;
   width: 48px;
@@ -195,6 +196,8 @@ img {
   margin-top: 48px;
   margin-right: auto;
   margin-left: auto;
+}
+.section-one-button {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -203,7 +206,6 @@ img {
 .section-one-button:focus {
   background-color: #404bbf;
 }
-
 .advantages {
   padding: 120px 0;
 }
