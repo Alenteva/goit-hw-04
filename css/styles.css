@@ -196,12 +196,11 @@ img {
   margin-top: 48px;
   margin-right: auto;
   margin-left: auto;
-}
-.section-one-button {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .section-one-button:hover,
 .section-one-button:focus {
   background-color: #404bbf;
